@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Harika! 🎭</title>
+    <link rel="stylesheet" href="success.css">
+</head>
+<body>
+    <div class="background-gifs" id="backgroundGifs">
+        <!-- GIF'ler JavaScript ile rastgele eklenecek -->
+    </div>
+    <div class="container">
+        <div class="success-message">
+            <h1>9 Ocak akşam 20:30'da hazır ol! 🎭✨</h1>
+        </div>
+    </div>
+    
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="hapi.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="success.js"></script>
+    <script>
+        // Müziği otomatik çal
+        window.addEventListener('load', function() {
+            const audio = document.getElementById('backgroundMusic');
+            audio.volume = 0.7; // Ses seviyesi
+            audio.play().catch(function(error) {
+                // Otomatik çalma engellendiğinde kullanıcı etkileşimi bekler
+                console.log('Müzik çalma başlatılamadı:', error);
+            });
+        });
+    </script>
+</body>
+</html>
